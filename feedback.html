@@ -72,10 +72,14 @@
     .redirect-message {
       margin: 0;
       color: #34254f;
-      font-size: clamp(27px, 5vw, 35px);
+      font-size: clamp(18px, 3vw, 24px);
       font-weight: 700;
       letter-spacing: 0.03em;
       line-height: 1.45;
+    }
+
+    .redirect-message span {
+      display: block;
     }
 
     .redirect-message::after {
@@ -102,7 +106,10 @@
 </head>
 <body>
   <main class="box">
-    <p class="redirect-message">JAPAN HIROBA Feedback Box を開いています…</p>
+    <p class="redirect-message">
+      <span>JAPAN HIROBA Feedback Box を開いています…</span>
+      <span>Opening JAPAN HIROBA Feedback Box…</span>
+    </p>
   </main>
 
   <script>
