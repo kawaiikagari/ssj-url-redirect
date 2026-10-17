@@ -3,10 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SSJ Feedback Box</title>
+  <title>JAPAN HIROBA Feedback Box</title>
+  <style>
+    :root {
+      --ink: #29253b;
+      --muted: #746e80;
+      --accent: #7654ae;
+      --accent-deep: #56358e;
+      --rose: #d97e91;
+      --paper: rgba(255, 255, 255, 0.92);
+      --line: rgba(102, 79, 145, 0.18);
+      --danger: #a42f4c;
+      --success: #287348;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 36px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      font-family: Arial, "Noto Sans JP", sans-serif;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(230, 158, 178, 0.42), transparent 32%),
+        radial-gradient(circle at 90% 92%, rgba(125, 95, 194, 0.28), transparent 35%),
+        linear-gradient(135deg, #f9f3f2, #f2f0fa 52%, #eff5f8);
+    }
+
+    .box {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      max-width: 700px;
+      padding: 38px;
+      overflow: hidden;
+      text-align: center;
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 22px;
+      box-shadow:
+        0 18px 55px rgba(49, 35, 83, 0.16),
+        0 3px 10px rgba(49, 35, 83, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .box::before {
+      position: absolute;
+      z-index: -1;
+      top: -105px;
+      right: -85px;
+      width: 240px;
+      height: 240px;
+      content: "";
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(222, 139, 168, 0.24),
+        transparent 68%
+      );
+    }
+
+    .redirect-message {
+      margin: 0;
+      color: #34254f;
+      font-size: clamp(27px, 5vw, 35px);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.45;
+    }
+
+    .redirect-message::after {
+      display: block;
+      width: 52px;
+      height: 4px;
+      margin: 14px auto 0;
+      content: "";
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--rose), var(--accent));
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .box {
+        padding: 28px 20px;
+        border-radius: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>SSJ Feedback Box を開いています…</p>
+  <main class="box">
+    <p class="redirect-message">JAPAN HIROBA Feedback Box を開いています…</p>
+  </main>
 
   <script>
   const destination =
