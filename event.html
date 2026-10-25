@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>SSJ Staff Calendar - Optimized</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        /* 1.65倍の拡大を維持しつつ、4週目以降が隠れない高さ（750px）に最適化 */
+        .scale-wrapper {
+            width: 60.6%;
+            height: 750px;
+            transform: scale(1.65);
+            transform-origin: top left;
+        }
+        iframe {
+            width: 100%;
+            height: 750px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="scale-wrapper">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FTokyo&showPrint=0&src=YWY3Yjg5ZmNlNDc2YmU3NzIyYTg2MTU0N2UzZmY5NzM5OWM5MDM1ZWEyNjk1ZTIwMTNlM2ZlYzYzMTkwMmNhZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MTBiYmNjNWU5NWFkM2ViYzg0Y2E1ZWFiYzZhODE3ZTIxY2M1NDg5OGQwZWJlNjFhOWVhMjAyZTM4NDQyYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZDc0YWUyMGEzODAxNDY4ODAyODllNmVlZDA5YzQxNDcwNjQxZmZiYTBiMzA5MDA3ZjM2MTliMzljNDBiODFkMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%238e24aa&color=%23d50000&color=%23009688&color=%230b8043" scrolling="no"></iframe>
+    </div>
+</body>
+</html>
