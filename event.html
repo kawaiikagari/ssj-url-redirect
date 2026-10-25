@@ -11,28 +11,34 @@
         }
         body, html {
             width: 100%;
-            height: %;
+            height: 100%;
             overflow: hidden;
             background-color: #ffffff;
         }
-        /* 1.65倍の拡大を維持しつつ、4週目以降が隠れない高さ（750px）に最適化 */
+        /* 1920x1080ベースで1.65倍拡大を綺麗に収めるためのコンテナ設定 */
         .scale-wrapper {
-            width: 100;
-            height: 750%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        /* 1.65倍の逆数（約60.6%）にすることで、拡大時に1920x1080の画面いっぱいにジャストフィットさせます */
+        iframe {
+            width: 60.6%;
+            height: 60.6%;
             transform: scale(1.65);
             transform-origin: top left;
-        }
-        iframe {
-            width: 99%;
-            height:99%;
             border: none;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="scale-wrapper">
-        <iframe src="https://calendar.google.com/calendar/u/0/embed?color=%2342d692&color=%23cd74e6&color=%23f83a22&src=10bbcc5e95ad3ebc84ca5245eabc6a817e21cc54898d0ebe61a9ea202e38442a@group.calendar.google.com&src=af7b89fce476be7722a861547e3ff97399c9035ea2695e2013e3fec631902cad@group.calendar.google.com&src=d74ae20a380146880289e6eed09c41470641ffba0b309007f3619b39c40b81d1@group.calendar.google.com" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?wkst=1&ctz=Asia%2FTokyo&showPrint=0&src=YWY3Yjg5ZmNlNDc2YmU3NzIyYTg2MTU0N2UzZmY5NzM5OWM5MDM1ZWEyNjk1ZTIwMTNlM2ZlYzYzMTkwMmNhZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MTBiYmNjNWU5NWFkM2ViYzg0Y2E1ZWFiYzZhODE3ZTIxY2M1NDg5OGQwZWJlNjFhOWVhMjAyZTM4NDQyYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZDc0YWUyMGEzODAxNDY4ODAyODllNmVlZDA5YzQxNDcwNjQxZmZiYTBiMzA5MDA3ZjM2MTliMzljNDBiODFkMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%238e24aa&color=%23d50000&color=%23009688&color=%230b8043" scrolling="no"></iframe>
     </div>
 </body>
 </html>
