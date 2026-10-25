@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>SSJ Staff Calendar - Perfect Fit</title>
+    <title>SSJ Staff Calendar - Optimized</title>
     <style>
         * {
             box-sizing: border-box;
@@ -15,23 +15,18 @@
             overflow: hidden;
             background-color: #ffffff;
         }
-        /* 面のサイズ（100%）に対して、1.65倍拡大したカレンダーを中央・左上基準で完全に満たす */
+        /* 1.65倍の拡大を維持しつつ、4週目以降が隠れない高さ（750px）に最適化 */
         .scale-wrapper {
             width: 100%;
             height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-        iframe {
-            width: 60.6%;
-            height: 60.6%;
             transform: scale(1.65);
             transform-origin: top left;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
             border: none;
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
         }
     </style>
 </head>
